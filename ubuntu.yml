@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+
+   ubuntu:
+     image: ubuntu:latest
+     ports:
+     restart: always
+     environment:
