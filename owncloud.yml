@@ -9,19 +9,16 @@ services:
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
-       MYSQL_DATABASE: wordpress
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress
+       MYSQL_DATABASE: owncloud
+       MYSQL_USER: owncloud
+       MYSQL_PASSWORD: owncloud
 
-   wordpress:
-     image: wordpress:latest
+   owmcloud:
+     image: owncloud
      expose:
-       - "80"
+       - "8080"
      restart: always
      environment:
-       WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
        VIRTUAL_HOST: ${VIRTUAL_HOST}
        LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
        LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
