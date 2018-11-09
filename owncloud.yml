@@ -17,6 +17,10 @@ services:
      image: owncloud
      expose:
        - "8080"
+     volumes:
+       - /dockervolumes/owncloud-app/apps:/var/www/html/apps
+       - /dockervolumes/owncloud-app/config:/var/www/html/config
+       - /dockervolumes/owncloud-app/data:/var/www/html/data
      restart: always
      environment:
        VIRTUAL_HOST: ${VIRTUAL_HOST}
