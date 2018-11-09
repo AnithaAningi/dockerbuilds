@@ -31,4 +31,3 @@ services:
 networks:
   webserver:
     name: webserver
-    driver: custom-driver-1
