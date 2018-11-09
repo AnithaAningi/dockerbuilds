@@ -2,7 +2,7 @@ version: '2'
 
 services:
 
-   db:
+   mysql:
      image: mysql:5.7
      volumes:
        - db_data:/var/lib/mysql
@@ -13,7 +13,7 @@ services:
        MYSQL_USER: owncloud
        MYSQL_PASSWORD: owncloud
 
-   owmcloud:
+   owncloud:
      image: owncloud
      expose:
        - "8080"
