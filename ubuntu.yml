@@ -4,6 +4,4 @@ services:
 
    ubuntu:
      image: ubuntu:latest
-     ports:
      restart: always
-     environment:
