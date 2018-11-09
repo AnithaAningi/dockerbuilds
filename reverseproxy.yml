@@ -21,7 +21,7 @@ services:
    letsencrypt:
      context: .
      image: jrcs/letsencrypt-nginx-proxy-companion
-     network: webservices
+     networks: webservices
      volumes:
         - /certs:/etc/nginx/certs
         - /var/run/docker.sock:/var/run/docker.sock:ro
