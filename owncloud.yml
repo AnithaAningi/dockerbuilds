@@ -5,7 +5,7 @@ services:
    mysql:
      image: mysql:5.7
      volumes:
-       - db_data:/var/lib/mysql
+       - /dockervolumes/owncloud-mysql/db_data:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
@@ -22,6 +22,3 @@ services:
        VIRTUAL_HOST: ${VIRTUAL_HOST}
        LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
        LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
-
-volumes:
-    db_data:
