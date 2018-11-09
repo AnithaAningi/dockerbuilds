@@ -15,6 +15,8 @@ services:
      labels:
         - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
      restart: always
+     networks:
+        - webserver
 
    letsencrypt:
      image: jrcs/letsencrypt-nginx-proxy-companion
@@ -23,6 +25,8 @@ services:
         - /var/run/docker.sock:/var/run/docker.sock:ro
      volumes_from:
         - nginx
+     networks:
+        - webserver
 
 networks:
   webserver:
