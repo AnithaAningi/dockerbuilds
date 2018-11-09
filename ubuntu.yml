@@ -1,7 +1,0 @@
-version: '2'
-
-services:
-
-   ubuntu:
-     image: ubuntu:latest
-     restart: always
