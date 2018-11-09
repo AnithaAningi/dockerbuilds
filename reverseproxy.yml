@@ -5,7 +5,7 @@ services:
    nginx:
      context: .
      image: jwilder/nginx-proxy
-     network: webservices
+     networks: webservices
      ports: 
         - "80:80"
         - "443:443"
