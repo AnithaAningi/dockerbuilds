@@ -16,7 +16,7 @@ services:
         - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
      restart: always
      networks:
-        - bridge
+        - host
 
    letsencrypt:
      image: jrcs/letsencrypt-nginx-proxy-companion
@@ -26,4 +26,4 @@ services:
      volumes_from:
         - nginx
      networks:
-        - bridge
+        - host
