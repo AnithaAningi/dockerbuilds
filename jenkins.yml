@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+   jenkins:
+     image: jenkins/jenkins:lts
+     expose:
+       - "8080"
+     restart: always
+     environment:
+       VIRTUAL_HOST: ${VIRTUAL_HOST}
+       LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
+       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+
