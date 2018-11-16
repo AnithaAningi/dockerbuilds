@@ -1,0 +1,11 @@
+version: '2'
+services:
+
+   mongodb:
+     image: mongo
+     restart: always
+     volumes:
+       - /dockervolumes/mongodb/datadir:/data/db
+     environment:
+       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD} 
