@@ -25,3 +25,4 @@ services:
      environment:
        ADVERTISE_IP: ${ADVERTISE_IP}
        PLEX_CLAIM: ${PLEX_CLAIM}
+       ALLOWED_NETWORKS: ${ALLOWED_NETWORKS}
