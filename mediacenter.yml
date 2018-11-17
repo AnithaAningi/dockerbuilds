@@ -23,4 +23,5 @@ services:
         - /external:/data
      restart: always
      environment:
-       ADVERTISE_IP: ${ADVERTISE_IP} 
+       ADVERTISE_IP: ${ADVERTISE_IP}
+       PLEX_CLAIM: ${PLEX_CLAIM}
